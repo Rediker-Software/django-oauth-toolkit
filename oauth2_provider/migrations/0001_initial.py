@@ -28,6 +28,7 @@ class Migration(SchemaMigration):
             ('authorization_grant_type', self.gf('django.db.models.fields.CharField')(max_length=32)),
             ('client_secret', self.gf('django.db.models.fields.CharField')(default='89288b8343edef095b5fee98b4def28409cf4e064fcd26b00c555f51d8fdabfcaedbae8b9d6739080cf27d216e13cc85133d794c9cc1018e0d116c951f0b865e', max_length=255, blank=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=255, blank=True)),
+            ('skip_authorization', self.gf('django.db.models.fields.BooleanField')(default=False)),
         ))
         db.send_create_signal(u'oauth2_provider', ['Application'])
 
